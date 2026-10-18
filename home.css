@@ -33,19 +33,28 @@ html {
   padding: 0;
 }
 nav {
+  filter: url(#glass-distortion);
   padding: 8px 5px;
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
   border-radius: 35px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border: 3px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 13px rgba(255, 255, 255, 0.5);
+  
   position: fixed;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%; 
   z-index: 1000; 
+}
+nav::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  filter: url(#glass-distortion);
+  z-index: -1;
+  pointer-events: none;
 }
   
 nav a {
@@ -109,14 +118,17 @@ font-size: 14px;
 }
 
 .box1 {
+  
   padding: 20px 20px 20px 20px;
   margin: 90px auto;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   border-radius: 70px;
   display: block;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 3px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 13px rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);40px rgba(0, 0, 0, 0.2);
 }
 
 .img {
@@ -313,24 +325,30 @@ p {
 }
 
 .page2 {
+  
   padding: 20px 20px 20px 20px;
   margin: -70px auto;
   backdrop-filter: blur(10px);
   border-radius: 70px;
   display: block;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 3px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 13px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 30px 60px rgba(255, 255, 255, 0.05), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.2) !important;
 }
 .page3 {
+  
   padding: 20px 20px 60px 20px;
   margin: 90px auto;
   backdrop-filter: blur(10px);
   border-radius: 50px;
   display: block;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 3px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 13px rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 30px 60px rgba(255, 255, 255, 0.05), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 .school {
   padding: 10px 10px 50px 10px;

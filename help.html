@@ -11,10 +11,10 @@
   <header>
      <nav class="nav1">
         <ul class="ul1">
-            <li><a href="home.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="help.html" aria-current= "page">HELP</a></li>
-            <li><a href="project.html">PROJECTS</a></li>
+            <li><a href="/home.html">HOME</a></li>
+            <li><a href="/about.html">ABOUT</a></li>
+            <li><a href="/help.html" aria-current= "page">HELP</a></li>
+            <li><a href="/project.html">PROJECTS</a></li>
         </ul>
      </nav>
   </header> 
@@ -44,5 +44,19 @@
 </div>
 
   </main>
+   <svg style="display: none;">
+   <filter id = "glass-distortion">
+     <feTurbulence
+     type = "fractalNoise"
+     baseFrequency="0.01, 0,01"
+     numOctaves = "1"
+     seed= "5"
+     result="turbulence"
+     />
+     <feGaussianBlur in ="turbulence"
+     stdDeviation = "3" result = "softMap" />
+     <feDisplacementMap in="SourceGraphic" in2="softMap" scale="70" />
+   </filter>
+ </svg>
 </body>
 </html>

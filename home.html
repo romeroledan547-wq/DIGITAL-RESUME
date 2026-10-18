@@ -12,10 +12,10 @@
   <header>
      <nav class="nav1">
         <ul class="ul1">
-            <li><a href="home.html" aria-current="page">HOME</a></li>
-           <li><a href="about.html">ABOUT</a></li>
-            <li><a href="help.html">HELP</a></li>
-            <li><a href="project.html">PROJECTS</a></li>
+            <li><a href="/home.html" aria-current="page">HOME</a></li>
+           <li><a href="/about.html">ABOUT</a></li>
+            <li><a href="/help.html">HELP</a></li>
+            <li><a href="/project.html">PROJECTS</a></li>
         </ul>
        
      </nav>
@@ -83,5 +83,19 @@
        
      </div>
    </div>
+   <svg style="display: none;">
+   <filter id = "glass-distortion">
+     <feTurbulence
+     type = "fractalNoise"
+     baseFrequency="0, 0"
+     numOctaves = "1"
+     seed= "5"
+     result="turbulence"
+     />
+     <feGaussianBlur in ="turbulence"
+     stdDeviation = "5" result = "softMap" />
+     <feDisplacementMap in="SourceGraphic" in2="softMap" scale="70" />
+   </filter>
+ </svg>
 </body>
 </html>
