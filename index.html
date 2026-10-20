@@ -14,23 +14,23 @@
   <div class="div">
          <h2 class="h2">LOGIN STAGE</h2>
          <label class="label1">LOGIN:</label>
-         <input type="text" class="box1" placeholder="enter email or number">
+         <input type="text" class="box1" placeholder="enter email or number" id = "login">
          <label class="label2">PASSWORD:</label>
-         <input type="password" class="box2" id="password" placeholder="enter password">
+         <input type="password" class="box2" id="password" placeholder="enter password" id="password">
          <a href="" class="new">Create Account</a> <br>
-         
+         <h2 id="output" class = "out"></h2> <br>
       <div class="div6">
       <div class="social-links1">
          <a href="https://www.facebook.com/oledan.romer.547" target="_blank">
          <i class="fa-brands fa-google"></i>
          </a>
          <a href="https://www.facebook.com/oledan.romer.547" target="_blank">
-         <i class="fa-brands fa-facebook"></i>
+         <i class="fa-brands fa-facebook"></i></a>
       </div>
       </div>
       </div>
       <div class="div2">
-         <a href="home.html"><button class="button"><b>LOGIN</b></button></a>
+         <button class="button" onclick="login()"><b>LOGIN</b></button>
       </div>
  <footer class="fot">
       <p>@2026 IT Student. All rights reserved. </p>
@@ -60,6 +60,24 @@
      <feDisplacementMap in="SourceGraphic" in2="softMap" scale="150" />
    </filter>
  </svg>
-
+<script>
+  function login() {
+      let userEmail= document.getElementById("login").value;
+     let userPass = document.getElementById("password").value;
+      let email = "romeroledan547@gmail.com"
+    let pass = "romer"
+    
+      if(userEmail===email && userPass===pass) {
+        
+        window.location.href = "home.html"; 
+        document.getElementById("output").innerText = "LOGIN SUCCESSFUL!";
+    document.getElementById("output").style.color = "darkgreen";
+      }
+      else {
+      document.getElementById("output").innerText = "WRONG EMAIL OR PASSWORD!";
+    document.getElementById("output").style.color = "darkred";
+      }
+    }
+</script>
 </body>
 </html>

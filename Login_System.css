@@ -292,3 +292,7 @@ button {
   transform: scale(1.2); 
   color: white; 
 }
+.out {
+  font-size: 10px;
+  text-align: center;
+}
